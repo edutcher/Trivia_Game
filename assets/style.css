@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root {
     --left-bg-color: rgba(87, 84, 236, 0.7);
     --right-bg-color: rgba(43, 43, 43, 0.8);
@@ -120,6 +121,7 @@ body {
 
 #gameArea {
     background-color: rgb(1, 11, 24);
+    height: 92vh;
 }
 
 #topBar {
@@ -130,21 +132,76 @@ body {
 }
 
 #lightScore {
-    background-color: rgb(1, 11, 24);
+    background-color: #010914;
     height: 100vh;
 }
 
 #casualScore {
-    background-color: rgb(1, 11, 24);
+    background-color: #010914;
     height: 100vh;
 }
 
 .choseArea {
+    background-color: #010914;
     background: url('./images/qmark2.jpg');
     background-repeat: no-repeat;
     background-position: 50%;
     height: 92vh;
-    color: white;
+}
+
+.choseArea h6 {
+    color: #ade3e3;
+}
+
+.choseArea h2 {
+    color: #8083c8;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-purp {
+    color: #91E3E2;
+    background-color: #262F8A;
+    border-color: #7580C0;
+}
+
+.btn-purp:hover,
+.btn-purp:focus,
+.btn-purp:active,
+.btn-purp.active,
+.open .dropdown-toggle.btn-purp {
+    color: #91E3E2;
+    background-color: #152350;
+    border-color: #7580C0;
+}
+
+.btn-purp:active,
+.btn-purp.active,
+.open .dropdown-toggle.btn-purp {
+    background-image: none;
+}
+
+.btn-purp.disabled,
+.btn-purp[disabled],
+fieldset[disabled] .btn-purp,
+.btn-purp.disabled:hover,
+.btn-purp[disabled]:hover,
+fieldset[disabled] .btn-purp:hover,
+.btn-purp.disabled:focus,
+.btn-purp[disabled]:focus,
+fieldset[disabled] .btn-purp:focus,
+.btn-purp.disabled:active,
+.btn-purp[disabled]:active,
+fieldset[disabled] .btn-purp:active,
+.btn-purp.disabled.active,
+.btn-purp[disabled].active,
+fieldset[disabled] .btn-purp.active {
+    background-color: #262F8A;
+    border-color: #7580C0;
+}
+
+.btn-purp .badge {
+    color: #262F8A;
+    background-color: #91E3E2;
 }
 
 @media (max-width: 890px) {

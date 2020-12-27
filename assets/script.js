@@ -1,5 +1,5 @@
 const gameArea = document.getElementById('gameArea');
-const catArray = ['H.P. Lovecraft', 'Coding', 'Movies', 'Music', 'Geography', 'History', 'Sports', 'Space', 'Religion'];
+const catArray = ['Lovecraft', 'Coding', 'Movies', 'Music', 'Geography', 'History', 'Sports', 'Space', 'Religion'];
 
 function destroyGameArea() {
 
@@ -77,11 +77,11 @@ function choseCats(gameType) {
     checkRow2.classList.add('row', 'col-12', 'text-center');
 
     choseCatBtn.textContent = 'Play!'
-    choseCatBtn.classList.add('btn', 'btn-success', 'mx-2', 'p-2', 'mt-5', 'px-3');
+    choseCatBtn.classList.add('btn', 'btn-purp', 'mx-2', 'p-2', 'mt-5', 'px-3');
     choseCatBtn.setAttribute('onclick', 'getQs()');
 
     rerollBtn.textContent = 'Reroll'
-    rerollBtn.classList.add('btn', 'btn-success', 'mx-2', 'p-2', 'mt-5', 'px-3');
+    rerollBtn.classList.add('btn', 'btn-purp', 'mx-2', 'p-2', 'mt-5', 'px-3');
     rerollBtn.setAttribute('onclick', 'choseCats(' + gameType + ')');
 
     var divArray = [];
@@ -127,8 +127,12 @@ function choseCats(gameType) {
 
     }
 
+    const spaceRow = document.createElement('div');
+    spaceRow.classList.add('row', 'py-5');
+
     catDiv.classList.add('text-center', 'col-12', 'choseArea');
     catDiv.appendChild(catHead);
+    catDiv.appendChild(spaceRow);
     catDiv.appendChild(checkRow);
     catDiv.appendChild(checkRow2);
     catDiv.appendChild(rerollBtn);
