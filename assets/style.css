@@ -80,6 +80,7 @@ body {
     background: url('./images/beach.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: -250px;
 }
 
 .split.right::before {
@@ -118,7 +119,7 @@ body {
 }
 
 #gameArea {
-    background-color: midnightblue;
+    background-color: rgb(1, 11, 24);
 }
 
 #topBar {
@@ -129,32 +130,30 @@ body {
 }
 
 #lightScore {
-    background-color: darkgreen;
+    background-color: rgb(1, 11, 24);
     height: 100vh;
 }
 
 #casualScore {
-    background-color: darkorange;
+    background-color: rgb(1, 11, 24);
     height: 100vh;
 }
 
 .choseArea {
-    background: url('./images/qmark.jpg');
+    background: url('./images/qmark2.jpg');
     background-repeat: no-repeat;
     background-position: 50%;
-    margin-top: 110px;
-    margin-bottom: 110px;
-    height: 70vh;
+    height: 92vh;
     color: white;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 890px) {
     .splitHead {
         font-size: 1.5rem;
         top: 30%;
     }
     .splitBtn {
         padding: 1rem;
-        width: 10rem;
+        width: 8rem;
     }
 }

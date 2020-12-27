@@ -1,5 +1,5 @@
 const gameArea = document.getElementById('gameArea');
-const catArray = ['H.P. Lovecraft', 'Programming', 'Movies', 'Music', 'Geography', 'History', 'Sports', 'Space', 'Religion'];
+const catArray = ['H.P. Lovecraft', 'Coding', 'Movies', 'Music', 'Geography', 'History', 'Sports', 'Space', 'Religion'];
 
 function destroyGameArea() {
 
