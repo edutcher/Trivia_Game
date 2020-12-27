@@ -10,6 +10,7 @@
 
 body {
     width: 99vw;
+    height: 99vh;
 }
 
 .splitHead {
@@ -117,14 +118,14 @@ body {
 }
 
 #gameArea {
-    background-color: blue;
+    background-color: midnightblue;
 }
 
 #topBar {
     background: url('./images/trivia.jpg');
     background-repeat: no-repeat;
     background-position: 50%;
-    height: 80px;
+    height: 8vh;
 }
 
 #lightScore {
@@ -135,6 +136,16 @@ body {
 #casualScore {
     background-color: darkorange;
     height: 100vh;
+}
+
+.choseArea {
+    background: url('./images/qmark.jpg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    margin-top: 110px;
+    margin-bottom: 110px;
+    height: 70vh;
+    color: white;
 }
 
 @media (max-width: 800px) {
