@@ -8,8 +8,12 @@
     --speed: 1000ms;
 }
 
+body {
+    width: 99vw;
+}
+
 .splitHead {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #fff;
     position: absolute;
     left: 50%;
@@ -27,7 +31,7 @@
     top: 40%;
     transform: translateX(-50%);
     text-decoration: none;
-    color: #fff;
+    color: black;
     border: #fff solid 0.2rem;
     font-size: 1rem;
     font-weight: bold;
@@ -36,14 +40,16 @@
     padding: 1.5rem;
 }
 
-.split.left .splitbtn:hover {
+.split.left .splitBtn:hover {
     background-color: var(--left-btn-hover-color);
     border-color: var(--left-btn-hover-color);
+    color: white;
 }
 
-.split.right .splitbtn:hover {
+.split.right .splitBtn:hover {
     background-color: var(--right-btn-hover-color);
     border-color: var(--right-btn-hover-color);
+    color: white;
 }
 
 .split {
@@ -107,7 +113,7 @@
 }
 
 #mainArea {
-    height: 93vh;
+    height: 92vh;
 }
 
 #gameArea {
@@ -115,7 +121,9 @@
 }
 
 #topBar {
-    background-color: crimson;
+    background: url('./images/trivia.jpg');
+    background-repeat: no-repeat;
+    background-position: 50%;
     height: 80px;
 }
 
@@ -127,4 +135,15 @@
 #casualScore {
     background-color: darkorange;
     height: 100vh;
+}
+
+@media (max-width: 800px) {
+    .splitHead {
+        font-size: 1.5rem;
+        top: 30%;
+    }
+    .splitBtn {
+        padding: 1rem;
+        width: 10rem;
+    }
 }
