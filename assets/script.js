@@ -104,9 +104,6 @@ function choseCats(gameType) {
     var tempArray = Array.from(catArray);
     var chosenCats = [];
 
-    console.log(tempArray);
-    console.log(catArray);
-
     for (var i = 6; i > 0; i--) {
         var randIndex = Math.floor(Math.random() * tempArray.length);
         var tempPull = tempArray.splice(randIndex, 1);

@@ -116,37 +116,49 @@ body {
 }
 
 #mainArea {
-    height: 92vh;
+    height: 90vh;
 }
 
 #gameArea {
-    background-color: rgb(1, 11, 24);
-    height: 92vh;
+    background-color: #0f6fb7;
+    height: 90vh;
 }
 
 #topBar {
-    background: url('./images/trivia.jpg');
+    background-color: #0f6fb7;
+    height: 10vh;
+}
+
+#questNum {
+    background-color: #0f6fb7;
+}
+
+#scoreArea {
+    background-color: #0f6fb7;
+}
+
+#logo {
+    background: url('./images/triviaLogo.png');
     background-repeat: no-repeat;
-    background-position: 50%;
-    height: 8vh;
+    background-position: 40%;
 }
 
 #lightScore {
-    background-color: #010914;
+    background-color: #0f6fb7;
     height: 100vh;
 }
 
 #casualScore {
-    background-color: #010914;
+    background-color: #0f6fb7;
     height: 100vh;
 }
 
 .choseArea {
-    background-color: #010914;
+    background-color: #0f6fb7;
     background: url('./images/qmark2.jpg');
     background-repeat: no-repeat;
     background-position: 50%;
-    height: 92vh;
+    height: 90vh;
 }
 
 .choseArea h6 {
