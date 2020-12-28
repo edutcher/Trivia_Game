@@ -136,10 +136,12 @@ body {
 
 #questNum {
     background-color: #0f6fb7;
+    text-shadow: 2px 2px rgba(87, 84, 236, 1);
 }
 
 #scoreArea {
     background-color: #0f6fb7;
+    text-shadow: 2px 2px rgba(87, 84, 236, 1);
 }
 
 #logo {

@@ -33,10 +33,13 @@ function answer(ans) {
         score += 10;
     }
 
+    questArray.splice(randomQ, 1);
+
     if (currentQ === 10) {
         gameOver = true;
         showResults();
     }
+
     nextQ();
 }
 
@@ -105,6 +108,8 @@ function getQs() {
     const whatChecked = document.querySelectorAll('input');
 
     questArray = [];
+
+    questArray.concat(genQs);
 
     for (var i = 0; i < chosenCats.length; i++) {
         var currentID = whatChecked[i].getAttribute('id');
