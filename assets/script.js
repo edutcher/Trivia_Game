@@ -1,11 +1,11 @@
 const gameArea = document.getElementById('gameArea');
-const questText = document.createElement('h3');
+const questText = document.createElement('h1');
 const questNum = document.getElementById('questNum');
 const scoreArea = document.getElementById('scoreArea');
 var btns = [];
 for (var i = 0; i < 4; i++) {
     const newBtn = document.createElement('button');
-    newBtn.classList.add('btn', 'btn-purp');
+    newBtn.classList.add('btn', 'btn-purp', 'mx-4', 'p-3', 'col-4');
     btns.push(newBtn)
 }
 const catArray = ['Lovecraft', 'Coding', 'Movies', 'Music', 'Geography', 'History', 'Sports', 'Space', 'Religion'];
@@ -19,12 +19,12 @@ var gameOver = false;
 
 function destroyGameArea() {
 
-    gameArea.style.transition = 'opacity 1s ease-in-out';
+    gameArea.style.transition = 'opacity .5s ease-in-out';
     gameArea.style.opacity = 0;
 
     setTimeout(function() {
         gameArea.textContent = " ";
-    }, 1000);
+    }, 600);
 }
 
 function answer(ans) {
@@ -32,8 +32,9 @@ function answer(ans) {
         score += 10;
     }
 
-    if (currentQ = 10) {
+    if (currentQ === 10) {
         gameOver = true;
+        showResults();
     }
     nextQ();
 }
@@ -72,11 +73,12 @@ function playCasual() {
     const btnRow1 = document.createElement('div');
     const btnRow2 = document.createElement('div');
 
-    questArea.classList.add('col-12');
+    questText.classList.add('pt-5')
+    questArea.classList.add('col-12', 'text-center');
     questArea.appendChild(questText);
 
-    btnRow1.classList.add('col-12', 'text-center', 'py-4');
-    btnRow2.classList.add('col-12', 'text-center', 'py-4');
+    btnRow1.classList.add('col-12', 'text-center', 'py-2');
+    btnRow2.classList.add('col-12', 'text-center', 'py-2');
 
     btnRow1.appendChild(btns[0]);
     btnRow1.appendChild(btns[1]);
@@ -92,7 +94,7 @@ function playCasual() {
     setTimeout(function() {
         gameArea.appendChild(questFrag);
         gameArea.style.opacity = 1;
-    }, 1000)
+    }, 600)
 
     nextQ();
 }
@@ -286,7 +288,7 @@ function choseCats(gameChoice) {
     setTimeout(function() {
         gameArea.appendChild(catDiv);
         gameArea.style.opacity = 1;
-    }, 1000)
+    }, 600)
 }
 
 choseMode();

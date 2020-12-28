@@ -19,7 +19,7 @@ const movieQs = [{
 }, {
     cat: "movie",
     type: 4,
-    question: "Bruc Lee's son, Brandon, died on the set of which film?",
+    question: "Bruce Lee's son, Brandon, died on the set of which film?",
     answers: ["Natural Born Killers", "Spice World", "The Crow", "Ip Man"],
     correct: 2
 }]
