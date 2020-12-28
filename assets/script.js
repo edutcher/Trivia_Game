@@ -1,5 +1,6 @@
 const gameArea = document.getElementById('gameArea');
 const catArray = ['Lovecraft', 'Coding', 'Movies', 'Music', 'Geography', 'History', 'Sports', 'Space', 'Religion'];
+var chosenCats = [];
 
 function destroyGameArea() {
 
@@ -9,6 +10,61 @@ function destroyGameArea() {
     setTimeout(function() {
         gameArea.textContent = " ";
     }, 1000);
+}
+
+function getQs(gameType) {
+
+    const whatChecked = document.querySelectorAll('input');
+
+    var questArray = [];
+
+    for (var i = 0; i < chosenCats.length; i++) {
+        var currentID = whatChecked[i].getAttribute('id');
+
+        if (whatChecked[i].checked === true) {
+            switch (currentID) {
+                case "Movies":
+                    questArray = questArray.concat(movieQs);
+                    break;
+                case "Music":
+                    questArray = questArray.concat(musicQs);
+                    break;
+                case "Coding":
+                    questArray = questArray.concat(codingQs);
+                    break;
+                case "Lovecraft":
+                    questArray = questArray.concat(lovecraftQs);
+                    break;
+                case "Space":
+                    questArray = questArray.concat(spaceQs);
+                    break;
+                case "History":
+                    questArray = questArray.concat(historyQs);
+                    break;
+                case "Geography":
+                    questArray = questArray.concat(geoQs);
+                    break;
+                case "Religion":
+                    questArray = questArray.concat(religionQs);
+                    break;
+                case "Sports":
+                    questArray = questArray.concat(sportsQs);
+                    break;
+            }
+        } else {
+            for (var j = 0; j < chosenCats.length; j++) {
+                if (chosenCats[j] === currentID) {
+                    chosenCats.splice(j, 1);
+                }
+            }
+        }
+    }
+
+    // if (gameType === 0) {
+    //     playTimed();
+    // } else {
+    //     playCasual();
+    // }
 }
 
 function choseMode() {
@@ -102,22 +158,23 @@ function choseCats(gameType) {
     }
 
     var tempArray = Array.from(catArray);
-    var chosenCats = [];
+    chosenCats = [];
 
     for (var i = 6; i > 0; i--) {
         var randIndex = Math.floor(Math.random() * tempArray.length);
         var tempPull = tempArray.splice(randIndex, 1);
-        chosenCats.push(tempPull);
+        var tempString = tempPull.toString();
+        chosenCats.push(tempString);
     }
 
     for (var i = 0; i < 3; i++) {
         catTitles[i].textContent = chosenCats[i];
-        checkArray[i].setAttribute('id', '#' + chosenCats[i]);
+        checkArray[i].setAttribute('id', chosenCats[i]);
         divArray[i].appendChild(checkArray[i]);
         divArray[i].appendChild(catTitles[i]);
         checkRow.appendChild(divArray[i]);
         catTitles[i + 3].textContent = chosenCats[i + 3];
-        checkArray[i + 3].setAttribute('id', '#' + chosenCats[i + 3]);
+        checkArray[i + 3].setAttribute('id', chosenCats[i + 3]);
         divArray[i + 3].appendChild(checkArray[i + 3]);
         divArray[i + 3].appendChild(catTitles[i + 3]);
         checkRow2.appendChild(divArray[i + 3]);

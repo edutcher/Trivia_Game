@@ -1,3 +1,240 @@
-{
-    "question": ""
-}
+const movieQs = [{
+    cat: "movie",
+    type: 4,
+    question: "The movie IN THE MOUTH OF MADNESS featured what fictional writer?",
+    answers: ["Frank Mankin", "Steven Cross", "Sutter Cain", "Bob Newhart"],
+    correct: 2
+}, {
+    cat: "movie",
+    type: 4,
+    question: "Who played Dr. Hannibal Lecter in THE SILENCE OF THE LAMBS?",
+    answers: ["Dustin Hoffman", "Sir Sean Connery", "Shaquiel O'Neil", "Sir Anthony Hopkins"],
+    correct: 3
+}, {
+    cat: "movie",
+    type: 4,
+    question: "Which Stanely Kubrick movie was banned in England until his death?",
+    answers: ["A Clockwork Orange", "Eyes Wide Shut", "Full Metal Jacket", "The Killing"],
+    correct: 0
+}, {
+    cat: "movie",
+    type: 4,
+    question: "Bruc Lee's son, Brandon, died on the set of which film?",
+    answers: ["Natural Born Killers", "Spice World", "The Crow", "Ip Man"],
+    correct: 2
+}]
+
+const musicQs = [{
+    cat: "music",
+    type: 4,
+    question: "In 2019 this band release FEAR INOCULUM, their first album in thirteen years",
+    answers: ["Metallica", "The Spice Girls", "Tool", "The Who"],
+    correct: 2
+}, {
+    cat: "music",
+    type: 4,
+    question: "Which artist won an Academy Award for THE SOCIAL NETWORK soundtrack and a Country Music Award for OLD TOWN ROAD?",
+    answers: ["Lil Nas", "Trent Reznor", "Billie Eilish", "Billy Joel"],
+    correct: 1,
+}, {
+    cat: "music",
+    type: 4,
+    question: "Which artist won an Academy Award for THE SOCIAL NETWORK soundtrack and a Country Music Award for OLD TOWN ROAD?",
+    answers: ["Lil Nas", "Trent Reznor", "Billie Eilish", "Billy Joel"],
+    correct: 1,
+}, {
+    cat: "music",
+    type: 4,
+    question: "Which artist won an Academy Award for THE SOCIAL NETWORK soundtrack and a Country Music Award for OLD TOWN ROAD?",
+    answers: ["Lil Nas", "Trent Reznor", "Billie Eilish", "Billy Joel"],
+    correct: 1,
+}]
+
+
+const geoQs = [{
+    cat: "geo",
+    type: 4,
+    question: "What Continent is Mount Kilimanjaro located on?",
+    answers: ["Asia", "South America", "Africa", "Europe"],
+    correct: 2
+}, {
+    cat: "geo",
+    type: 4,
+    question: "What Continent is Mount Kilimanjaro located on?",
+    answers: ["Asia", "South America", "Africa", "Europe"],
+    correct: 2
+}, {
+    cat: "geo",
+    type: 4,
+    question: "What Continent is Mount Kilimanjaro located on?",
+    answers: ["Asia", "South America", "Africa", "Europe"],
+    correct: 2
+}, {
+    cat: "geo",
+    type: 4,
+    question: "What Continent is Mount Kilimanjaro located on?",
+    answers: ["Asia", "South America", "Africa", "Europe"],
+    correct: 2
+}]
+
+
+const spaceQs = [{
+    cat: "space",
+    type: 4,
+    question: "How many gas giants are in our solar system?",
+    answers: ["Two", "Three", "Four", "Six"],
+    correct: 2
+}, {
+    cat: "space",
+    type: 4,
+    question: "How many gas giants are in our solar system?",
+    answers: ["Two", "Three", "Four", "Six"],
+    correct: 2
+}, {
+    cat: "space",
+    type: 4,
+    question: "How many gas giants are in our solar system?",
+    answers: ["Two", "Three", "Four", "Six"],
+    correct: 2
+}, {
+    cat: "space",
+    type: 4,
+    question: "How many gas giants are in our solar system?",
+    answers: ["Two", "Three", "Four", "Six"],
+    correct: 2
+}]
+
+
+const codingQs = [{
+    cat: "coding",
+    type: 4,
+    question: "In javascript, which is NOT an example of a loop",
+    answers: ["for", "while", "if else", "do while"],
+    correct: 2
+}, {
+    cat: "coding",
+    type: 4,
+    question: "In javascript, which is NOT an example of a loop",
+    answers: ["for", "while", "if else", "do while"],
+    correct: 2
+}, {
+    cat: "coding",
+    type: 4,
+    question: "In javascript, which is NOT an example of a loop",
+    answers: ["for", "while", "if else", "do while"],
+    correct: 2
+}, {
+    cat: "coding",
+    type: 4,
+    question: "In javascript, which is NOT an example of a loop",
+    answers: ["for", "while", "if else", "do while"],
+    correct: 2
+}]
+
+
+const lovecraftQs = [{
+    cat: "lovecraft",
+    type: 4,
+    question: "One of Lovecrafts best known stories; The ________ Horror",
+    answers: ["Cosmic", "Lurking", "Dunwich", "Innsmouth"],
+    correct: 2
+}, {
+    cat: "lovecraft",
+    type: 4,
+    question: "One of Lovecrafts best known stories; The ________ Horror",
+    answers: ["Cosmic", "Lurking", "Dunwich", "Innsmouth"],
+    correct: 2
+}, {
+    cat: "lovecraft",
+    type: 4,
+    question: "One of Lovecrafts best known stories; The ________ Horror",
+    answers: ["Cosmic", "Lurking", "Dunwich", "Innsmouth"],
+    correct: 2
+}, {
+    cat: "lovecraft",
+    type: 4,
+    question: "One of Lovecrafts best known stories; The ________ Horror",
+    answers: ["Cosmic", "Lurking", "Dunwich", "Innsmouth"],
+    correct: 2
+}]
+
+
+const historyQs = [{
+    cat: "history",
+    type: 4,
+    question: "The assassination of this man sparked World War I",
+    answers: ["Billy Joel", "Pope Lazarus IV", "Franz Ferdinand", "Boris Yeltsin"],
+    correct: 2
+}, {
+    cat: "history",
+    type: 4,
+    question: "The assassination of this man sparked World War I",
+    answers: ["Billy Joel", "Pope Lazarus IV", "Franz Ferdinand", "Boris Yeltsin"],
+    correct: 2
+}, {
+    cat: "history",
+    type: 4,
+    question: "The assassination of this man sparked World War I",
+    answers: ["Billy Joel", "Pope Lazarus IV", "Franz Ferdinand", "Boris Yeltsin"],
+    correct: 2
+}, {
+    cat: "history",
+    type: 4,
+    question: "The assassination of this man sparked World War I",
+    answers: ["Billy Joel", "Pope Lazarus IV", "Franz Ferdinand", "Boris Yeltsin"],
+    correct: 2
+}]
+
+
+const religionQs = [{
+    cat: "religion",
+    type: 4,
+    question: "In Norse Mythology, Odin's horse is named:",
+    answers: ["Quetzalcoatl", "Jormungandr", "Sleipnir", "Nub Shiggurath"],
+    correct: 2
+}, {
+    cat: "religion",
+    type: 4,
+    question: "In Norse Mythology, Odin's horse is named:",
+    answers: ["Quetzalcoatl", "Jormungandr", "Sleipnir", "Nub Shiggurath"],
+    correct: 2
+}, {
+    cat: "religion",
+    type: 4,
+    question: "In Norse Mythology, Odin's horse is named:",
+    answers: ["Quetzalcoatl", "Jormungandr", "Sleipnir", "Nub Shiggurath"],
+    correct: 2
+}, {
+    cat: "religion",
+    type: 4,
+    question: "In Norse Mythology, Odin's horse is named:",
+    answers: ["Quetzalcoatl", "Jormungandr", "Sleipnir", "Nub Shiggurath"],
+    correct: 2
+}]
+
+
+const sportsQs = [{
+    cat: "sports",
+    type: 4,
+    question: "Which sport is Gary Kasparov well known for?",
+    answers: ["Tennis", "Soccer", "Chess", "Rugby"],
+    correct: 2
+}, {
+    cat: "sports",
+    type: 4,
+    question: "Which sport is Gary Kasparov well known for?",
+    answers: ["Tennis", "Soccer", "Chess", "Rugby"],
+    correct: 2
+}, {
+    cat: "sports",
+    type: 4,
+    question: "Which sport is Gary Kasparov well known for?",
+    answers: ["Tennis", "Soccer", "Chess", "Rugby"],
+    correct: 2
+}, {
+    cat: "sports",
+    type: 4,
+    question: "Which sport is Gary Kasparov well known for?",
+    answers: ["Tennis", "Soccer", "Chess", "Rugby"],
+    correct: 2
+}]
