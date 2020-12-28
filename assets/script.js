@@ -1,6 +1,21 @@
 const gameArea = document.getElementById('gameArea');
+const questText = document.createElement('h3');
+const questNum = document.getElementById('questNum');
+const scoreArea = document.getElementById('scoreArea');
+var btns = [];
+for (var i = 0; i < 4; i++) {
+    const newBtn = document.createElement('button');
+    newBtn.classList.add('btn', 'btn-purp');
+    btns.push(newBtn)
+}
 const catArray = ['Lovecraft', 'Coding', 'Movies', 'Music', 'Geography', 'History', 'Sports', 'Space', 'Religion'];
 var chosenCats = [];
+var questArray = [];
+var currentQ = 0;
+var randomQ = 0;
+var gameType = 1;
+var score = 0;
+var gameOver = false;
 
 function destroyGameArea() {
 
@@ -12,11 +27,81 @@ function destroyGameArea() {
     }, 1000);
 }
 
-function getQs(gameType) {
+function answer(ans) {
+    if (ans === questArray[randomQ].correct) {
+        score += 10;
+    }
+
+    if (currentQ = 10) {
+        gameOver = true;
+    }
+    nextQ();
+}
+
+function nextQ() {
+    currentQ++;
+    questNum.textContent = "Question #" + currentQ;
+    scoreArea.textContent = "Score: " + score;
+    randomQ = Math.floor(Math.random() * questArray.length);
+
+    questText.textContent = questArray[randomQ].question;
+
+    var tempAns = Array.from(questArray[randomQ].answers);
+
+    for (var i = tempAns.length - 1; i >= 0; i--) {
+        var tempRand = Math.floor(Math.random() * tempAns.length);
+        btns[i].textContent = tempAns[tempRand];
+        tempAns.splice(tempRand, 1);
+    }
+
+    for (var i = 0; i < 4; i++) {
+        for (var j = 0; j < 4; j++) {
+            if (btns[i].textContent === questArray[randomQ].answers[j]) {
+                btns[i].setAttribute('onclick', 'answer(' + j + ')');
+            }
+        }
+    }
+
+
+}
+
+function playCasual() {
+    destroyGameArea();
+
+    const questArea = document.createElement('div');
+    const btnRow1 = document.createElement('div');
+    const btnRow2 = document.createElement('div');
+
+    questArea.classList.add('col-12');
+    questArea.appendChild(questText);
+
+    btnRow1.classList.add('col-12', 'text-center', 'py-4');
+    btnRow2.classList.add('col-12', 'text-center', 'py-4');
+
+    btnRow1.appendChild(btns[0]);
+    btnRow1.appendChild(btns[1]);
+    btnRow2.appendChild(btns[2]);
+    btnRow2.appendChild(btns[3]);
+
+    var questFrag = document.createDocumentFragment();
+
+    questFrag.appendChild(questArea);
+    questFrag.appendChild(btnRow1);
+    questFrag.appendChild(btnRow2);
+
+    setTimeout(function() {
+        gameArea.appendChild(questFrag);
+        gameArea.style.opacity = 1;
+    }, 1000)
+
+    nextQ();
+}
+
+function getQs() {
 
     const whatChecked = document.querySelectorAll('input');
 
-    var questArray = [];
+    questArray = [];
 
     for (var i = 0; i < chosenCats.length; i++) {
         var currentID = whatChecked[i].getAttribute('id');
@@ -60,11 +145,11 @@ function getQs(gameType) {
         }
     }
 
-    // if (gameType === 0) {
-    //     playTimed();
-    // } else {
-    //     playCasual();
-    // }
+    if (gameType === 0) {
+        playTimed();
+    } else {
+        playCasual();
+    }
 }
 
 function choseMode() {
@@ -115,8 +200,14 @@ function choseMode() {
     gameArea.appendChild(modeFrag);
 }
 
-function choseCats(gameType) {
+function choseCats(gameChoice) {
     destroyGameArea();
+
+    if (gameChoice === 0) {
+        gameType = 0;
+    } else {
+        gameType = 1;
+    }
 
     const catDiv = document.createElement('div');
 
@@ -138,7 +229,7 @@ function choseCats(gameType) {
 
     rerollBtn.textContent = 'Reroll'
     rerollBtn.classList.add('btn', 'btn-purp', 'mx-2', 'p-2', 'mt-5', 'px-3');
-    rerollBtn.setAttribute('onclick', 'choseCats(' + gameType + ')');
+    rerollBtn.setAttribute('onclick', 'choseCats()');
 
     var divArray = [];
     var checkArray = [];
