@@ -6,7 +6,7 @@ const scoreArea = document.getElementById('scoreArea');
 var btns = [];
 for (var i = 0; i < 4; i++) {
     const newBtn = document.createElement('button');
-    newBtn.classList.add('btn', 'btn-purp', 'mx-4', 'p-3', 'col-4');
+    newBtn.classList.add('btn', 'btn-purp', 'p-3', 'col-4');
     btns.push(newBtn)
 }
 const catArray = ['Lovecraft', 'Coding', 'Movies', 'Music', 'Geography', 'History', 'Sports', 'Space', 'Religion'];
@@ -226,6 +226,7 @@ function choseCats(gameChoice) {
     const choseCatBtn = document.createElement('button');
     const rerollBtn = document.createElement('button');
 
+    catHead.setAttribute('id', 'catHead');
     catHead.textContent = 'Chose your Catagories';
     catHead.classList.add('my-5');
 

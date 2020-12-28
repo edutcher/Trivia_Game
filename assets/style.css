@@ -125,6 +125,10 @@ body {
     height: 89vh;
 }
 
+#gameArea button {
+    margin: 0rem 1rem;
+}
+
 #topBar {
     background-color: #0f6fb7;
     height: 10vh;
@@ -172,8 +176,8 @@ body {
 }
 
 #questText {
-    color: #20571c;
-    text-shadow: 3px 3px black;
+    color: black;
+    text-shadow: 3px 3px #20571c;
 }
 
 .btn-purp {
@@ -230,5 +234,24 @@ fieldset[disabled] .btn-purp.active {
     .splitBtn {
         padding: 1rem;
         width: 8rem;
+    }
+    #catHead {
+        display: none;
+    }
+}
+
+@media (max-width: 530px) {
+    #questText {
+        font-size: 23px;
+    }
+    #gameArea button {
+        margin: 0;
+        font-size: 13px;
+    }
+    #questNum {
+        font-size: 18px;
+    }
+    #scoreArea {
+        font-size: 18px;
     }
 }
