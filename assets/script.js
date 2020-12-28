@@ -1,5 +1,6 @@
 const gameArea = document.getElementById('gameArea');
 const questText = document.createElement('h1');
+questText.setAttribute('id', 'questText');
 const questNum = document.getElementById('questNum');
 const scoreArea = document.getElementById('scoreArea');
 var btns = [];
@@ -77,8 +78,8 @@ function playCasual() {
     questArea.classList.add('col-12', 'text-center');
     questArea.appendChild(questText);
 
-    btnRow1.classList.add('col-12', 'text-center', 'py-2');
-    btnRow2.classList.add('col-12', 'text-center', 'py-2');
+    btnRow1.classList.add('col-12', 'text-center');
+    btnRow2.classList.add('col-12', 'text-center');
 
     btnRow1.appendChild(btns[0]);
     btnRow1.appendChild(btns[1]);
@@ -167,6 +168,12 @@ function choseMode() {
 
     lightHead.classList.add('splitHead');
     casualHead.classList.add('splitHead');
+
+    lightHead.style.textShadow = "1px 1px black";
+    lightHead.style.color = "#dad41c";
+
+    casualHead.style.textShadow = '1px 1px black';
+    casualHead.style.color = "rgba(28, 122, 28, 1)"
 
     lightBtn.classList.add('splitBtn');
     casualBtn.classList.add('splitBtn');

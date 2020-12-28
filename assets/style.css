@@ -12,6 +12,7 @@
 body {
     width: 99vw;
     height: 99vh;
+    background-color: #0f6fb7;
 }
 
 .splitHead {
@@ -34,7 +35,7 @@ body {
     transform: translateX(-50%);
     text-decoration: none;
     color: black;
-    border: #fff solid 0.2rem;
+    border: black rounded 0.2rem;
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -116,12 +117,12 @@ body {
 }
 
 #mainArea {
-    height: 90vh;
+    height: 89vh;
 }
 
 #gameArea {
     background-color: #0f6fb7;
-    height: 90vh;
+    height: 89vh;
 }
 
 #topBar {
@@ -158,7 +159,7 @@ body {
     background: url('./images/qmark2.jpg');
     background-repeat: no-repeat;
     background-position: 50%;
-    height: 90vh;
+    height: 89vh;
 }
 
 .choseArea h6 {
@@ -168,6 +169,11 @@ body {
 .choseArea h2 {
     color: #8083c8;
     font-family: 'Roboto', sans-serif;
+}
+
+#questText {
+    color: #20571c;
+    text-shadow: 3px 3px black;
 }
 
 .btn-purp {
