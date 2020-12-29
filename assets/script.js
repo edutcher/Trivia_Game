@@ -1,6 +1,9 @@
 const gameArea = document.getElementById('gameArea');
 const questText = document.createElement('h1');
 questText.setAttribute('id', 'questText');
+const questArea = document.createElement('div');
+const btnRow1 = document.createElement('div');
+const btnRow2 = document.createElement('div');
 const questNum = document.getElementById('questNum');
 const scoreArea = document.getElementById('scoreArea');
 var btns = [];
@@ -41,6 +44,23 @@ function startTimer() {
     }, 1000);
 }
 
+function showResults() {
+    questText.textContent = 'Your score was ' + score;
+
+    btns[0].textContent = 'Play again?';
+    btns[0].setAttribute('onclick', 'choseMode()');
+
+    btns[1].style.opacity = 0;
+    btns[2].style.opacity = 0;
+    btns[3].style.opacity = 0;
+
+    currentQ = 0;
+    score = 0;
+
+    questNum.textContent = "";
+    scoreArea.textContent = "";
+}
+
 function answer(ans) {
     if (casualType) {
         if (ans === questArray[randomQ].correct) {
@@ -62,7 +82,9 @@ function answer(ans) {
         showResults();
     }
 
-    nextQ();
+    if (!gameOver) {
+        nextQ();
+    }
 }
 
 function nextQ() {
@@ -95,18 +117,16 @@ function nextQ() {
 function playGame() {
     destroyGameArea();
 
-    console.log(casualType);
-
-    const questArea = document.createElement('div');
-    const btnRow1 = document.createElement('div');
-    const btnRow2 = document.createElement('div');
-
     questText.classList.add('pt-5')
     questArea.classList.add('col-12', 'text-center');
     questArea.appendChild(questText);
 
     btnRow1.classList.add('col-12', 'text-center');
     btnRow2.classList.add('col-12', 'text-center');
+
+    btns[1].style.opacity = 1;
+    btns[2].style.opacity = 1;
+    btns[3].style.opacity = 1;
 
     btnRow1.appendChild(btns[0]);
     btnRow1.appendChild(btns[1]);
