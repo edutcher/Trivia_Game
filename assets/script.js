@@ -35,11 +35,11 @@ function startTimer() {
     var timerInterval = setInterval(function() {
         score++;
 
+        scoreArea.textContent = "Score: " + score;
+
         if (gameOver) {
             clearInterval(timerInterval);
         }
-
-        scoreArea.textContent = "Score: " + score;
 
     }, 1000);
 }
@@ -58,6 +58,7 @@ function showResults() {
     score = 0;
 
     questNum.textContent = "";
+    scoreArea.style.opacity = 0;
     scoreArea.textContent = "";
 }
 
@@ -116,6 +117,9 @@ function nextQ() {
 
 function playGame() {
     destroyGameArea();
+
+    gameOver = false;
+    scoreArea.style.opacity = 1;
 
     questText.classList.add('pt-5')
     questArea.classList.add('col-12', 'text-center');
@@ -218,10 +222,10 @@ function choseMode() {
     lightHead.classList.add('splitHead');
     casualHead.classList.add('splitHead');
 
-    lightHead.style.textShadow = "1px 1px black";
-    lightHead.style.color = "#dad41c";
+    lightHead.style.textShadow = "3px 3px #262F8A";
+    lightHead.style.color = "black";
 
-    casualHead.style.textShadow = '1px 1px black';
+    casualHead.style.textShadow = '2px 2px black';
     casualHead.style.color = "rgba(28, 122, 28, 1)"
 
     lightBtn.classList.add('splitBtn');
@@ -260,6 +264,8 @@ function choseMode() {
 
 function choseCats(gameChoice) {
     destroyGameArea();
+
+    gameOver = false;
 
     if (gameChoice === 1) {
         casualType = true;
