@@ -14,7 +14,7 @@ var chosenCats = [];
 var questArray = [];
 var currentQ = 0;
 var randomQ = 0;
-var gameType = 1;
+var casualType = true;
 var score = 0;
 var gameOver = false;
 
@@ -28,14 +28,36 @@ function destroyGameArea() {
     }, 600);
 }
 
+function startTimer() {
+    var timerInterval = setInterval(function() {
+        score++;
+
+        if (gameOver) {
+            clearInterval(timerInterval);
+        }
+
+        scoreArea.textContent = "Score: " + score;
+
+    }, 1000);
+}
+
 function answer(ans) {
-    if (ans === questArray[randomQ].correct) {
-        score += 10;
+    if (casualType) {
+        if (ans === questArray[randomQ].correct) {
+            score += 10;
+        }
     }
+
+    if (!casualType) {
+        if (ans !== questArray[randomQ].correct) {
+            score += 15;
+        }
+    }
+
 
     questArray.splice(randomQ, 1);
 
-    if (currentQ === 10) {
+    if (currentQ === 20) {
         gameOver = true;
         showResults();
     }
@@ -70,8 +92,10 @@ function nextQ() {
 
 }
 
-function playCasual() {
+function playGame() {
     destroyGameArea();
+
+    console.log(casualType);
 
     const questArea = document.createElement('div');
     const btnRow1 = document.createElement('div');
@@ -99,6 +123,10 @@ function playCasual() {
         gameArea.appendChild(questFrag);
         gameArea.style.opacity = 1;
     }, 600)
+
+    if (!casualType) {
+        startTimer();
+    }
 
     nextQ();
 }
@@ -153,11 +181,7 @@ function getQs() {
         }
     }
 
-    if (gameType === 0) {
-        playTimed();
-    } else {
-        playCasual();
-    }
+    playGame();
 }
 
 function choseMode() {
@@ -217,10 +241,10 @@ function choseMode() {
 function choseCats(gameChoice) {
     destroyGameArea();
 
-    if (gameChoice === 0) {
-        gameType = 0;
+    if (gameChoice === 1) {
+        casualType = true;
     } else {
-        gameType = 1;
+        casualType = false;
     }
 
     const catDiv = document.createElement('div');
