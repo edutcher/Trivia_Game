@@ -96,6 +96,11 @@ function answer(whatBtn, ans) {
     if (!casualType) {
         if (ans !== questArray[randomQ].correct) {
             score += 15;
+            tips[whatBtn].textContent = 'Wrong';
+            tips[whatBtn].style.backgroundColor = 'red';
+        } else {
+            tips[whatBtn].textContent = 'Correct!';
+            tips[whatBtn].style.backgroundColor = "green";
         }
     }
 
