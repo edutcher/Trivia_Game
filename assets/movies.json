@@ -242,25 +242,121 @@ const sportsQs = [{
 const genQs = [{
     cat: "gen",
     type: 4,
-    question: "Which sport is Gary Kasparov well known for?",
-    answers: ["Tennis", "Soccer", "Chess", "Rugby"],
+    question: "Salvador Dalí had this animal as a pet",
+    answers: ["Panda", "Koala", "Anteater", "Alligator"],
     correct: 2
 }, {
     cat: "gen",
     type: 4,
-    question: "Which sport is Gary Kasparov well known for?",
-    answers: ["Tennis", "Soccer", "Chess", "Rugby"],
+    question: "Area 51 is located in which US State?",
+    answers: ["Utah", "New Mexico", "Nevada", "Arizona"],
     correct: 2
 }, {
     cat: "gen",
     type: 4,
-    question: "Which sport is Gary Kasparov well known for?",
-    answers: ["Tennis", "Soccer", "Chess", "Rugby"],
+    question: "How many colors are in a rainbow?",
+    answers: ["Six", "Eight", "Seven", "Nine"],
     correct: 2
 }, {
     cat: "gen",
     type: 4,
-    question: "Which sport is Gary Kasparov well known for?",
-    answers: ["Tennis", "Soccer", "Chess", "Rugby"],
+    question: "What is Cynophobia the fear of?",
+    answers: ["Ice", "Stairs", "Dogs", "Insects"],
+    correct: 2
+}, {
+    cat: "gen",
+    type: 4,
+    question: "What is the world's most expensive spice by weight?",
+    answers: ["Melange", "Cinnamon", "Saffron", "Anise"],
+    correct: 2
+}, {
+    cat: "gen",
+    type: 4,
+    question: "What alcoholic drink is mainly made from juniper berries?",
+    answers: ["Whiteclaw", "Mead", "Gin", "Vodka"],
+    correct: 2
+}, {
+    cat: "gen",
+    type: 4,
+    question: "When did the website FACEBOOK launch?",
+    answers: ["2011", "2009", "2004", "2001"],
+    correct: 2
+}, {
+    cat: "gen",
+    type: 4,
+    question: "What’s the chemical symbol for silver?",
+    answers: ["Mu", "Sl", "Ag", "Si"],
+    correct: 2
+}, {
+    cat: "gen",
+    type: 4,
+    question: "How many colors do the Olympic Rings have?",
+    answers: ["Seven", "Four", "Five", "Six"],
+    correct: 2
+}, {
+    cat: "gen",
+    type: 4,
+    question: "What TV station did the show LOST originally air on?",
+    answers: ["Fox", "CBS", "ABC", "NBC"],
+    correct: 2
+}, {
+    cat: "gen",
+    type: 4,
+    question: "What is the capital city of Australia?",
+    answers: ["Melbourne", "Perth", "Canberra", "Sydney"],
+    correct: 2
+}, {
+    cat: "gen",
+    type: 4,
+    question: "How many notes are there in a musical scale?",
+    answers: ["Five", "Six", "Seven", "Nine"],
+    correct: 2
+}, {
+    cat: "gen",
+    type: 4,
+    question: "A baby Oyster is called a :",
+    answers: ["Chit", "Oyling", "Spat", "Dink"],
+    correct: 2
+}, {
+    cat: "gen",
+    type: 4,
+    question: "How many keys are there on a piano?",
+    answers: ["94", "76", "88", "67"],
+    correct: 2
+}, {
+    cat: "gen",
+    type: 4,
+    question: "Which fictional hotel serves as the setting for THE SHINING?",
+    answers: ["Bates", "Ritz Carlton", "Overlook", "California"],
+    correct: 2
+}, {
+    cat: "gen",
+    type: 4,
+    question: "What is the name of the time machine DOCTOR WHO uses?",
+    answers: ["OCTDEX", "PRIMER", "TARDIS", "LOOMIS"],
+    correct: 2
+}, {
+    cat: "gen",
+    type: 4,
+    question: "Natasha Romanova is the real name of which superhero?",
+    answers: ["Storm", "Taskmaster", "Black Widow", "Ms Marvel"],
+    correct: 2
+}, {
+    cat: "gen",
+    type: 4,
+    question: "Which year was Daniel Craig’s first Bond film released?",
+    answers: ["2011", "2004", "2006", "2009"],
+    correct: 2
+}, {
+    cat: "gen",
+    type: 4,
+    question: "Which year did the European Union first introduce the Euro as currency?",
+    answers: ["1992", "1985", "1999", "2006"],
+    correct: 2
+}, {
+    cat: "gen",
+    type: 4,
+    question: "Beirut is the capital of which country?",
+    answers: ["Syria", "Azerbaijan", "Lebanon", "Croatia"],
     correct: 2
 }]

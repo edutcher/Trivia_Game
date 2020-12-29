@@ -161,7 +161,7 @@ function getQs() {
 
     questArray = [];
 
-    questArray.concat(genQs);
+    questArray = questArray.concat(genQs);
 
     for (var i = 0; i < chosenCats.length; i++) {
         var currentID = whatChecked[i].getAttribute('id');
@@ -204,7 +204,6 @@ function getQs() {
             }
         }
     }
-
     playGame();
 }
 
