@@ -7,11 +7,30 @@ const btnRow2 = document.createElement('div');
 const questNum = document.getElementById('questNum');
 const scoreArea = document.getElementById('scoreArea');
 var btns = [];
+var tips = [];
+
+// Reset tooltip when mouse leaves
+function outFunc(whatBtn) {
+    tips[whatBtn].textContent = "Answer";
+    tips[whatBtn].style.backgroundColor = '#555';
+}
+
 for (var i = 0; i < 4; i++) {
     const newBtn = document.createElement('button');
-    newBtn.classList.add('btn', 'btn-purp', 'p-3', 'col-4');
-    btns.push(newBtn)
+    newBtn.classList.add('btn', 'btn-purp', 'p-3', 'col-4', 'tool');
+    newBtn.setAttribute('id', 'btn' + i);
+    newBtn.setAttribute('onmouseout', 'outFunc(' + i + ')');
+
+    const newTip = document.createElement('span');
+    newTip.classList.add('tiptext');
+    newTip.setAttribute('id', 'tip' + i);
+    newTip.textContent = 'Answer';
+    tips.push(newTip);
+    btns.push(newBtn);
+
+    btns[i].appendChild(tips[i]);
 }
+
 const catArray = ['Lovecraft', 'Coding', 'Movies', 'Music', 'Geography', 'History', 'Sports', 'Space', 'Religion'];
 var chosenCats = [];
 var questArray = [];
@@ -62,10 +81,15 @@ function showResults() {
     scoreArea.textContent = "";
 }
 
-function answer(ans) {
+function answer(whatBtn, ans) {
     if (casualType) {
         if (ans === questArray[randomQ].correct) {
             score += 10;
+            tips[whatBtn].textContent = 'Correct!';
+            tips[whatBtn].style.backgroundColor = "green";
+        } else {
+            tips[whatBtn].textContent = 'Wrong';
+            tips[whatBtn].style.backgroundColor = 'red';
         }
     }
 
@@ -107,9 +131,13 @@ function nextQ() {
     for (var i = 0; i < 4; i++) {
         for (var j = 0; j < 4; j++) {
             if (btns[i].textContent === questArray[randomQ].answers[j]) {
-                btns[i].setAttribute('onclick', 'answer(' + j + ')');
+                btns[i].setAttribute('onclick', 'answer(' + i + ', ' + j + ')');
             }
         }
+    }
+
+    for (var i = 0; i < 4; i++) {
+        btns[i].appendChild(tips[i]);
     }
 
 
