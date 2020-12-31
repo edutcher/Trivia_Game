@@ -152,6 +152,7 @@ function playGame() {
     destroyGameArea();
 
     gameOver = false;
+    score = 0;
     scoreArea.style.opacity = 1;
 
     questText.classList.add('pt-5')
@@ -194,9 +195,7 @@ function getQs() {
 
     questArray = [];
 
-    questArray = questArray.concat(genQs);
-
-    for (var i = 0; i < chosenCats.length; i++) {
+    for (var i = 0; i < whatChecked.length; i++) {
         var currentID = whatChecked[i].getAttribute('id');
 
         if (whatChecked[i].checked === true) {
@@ -236,6 +235,17 @@ function getQs() {
                 }
             }
         }
+    }
+
+    if (questArray.length < 20) {
+        var newArray = [];
+        var anotherArray = Array.from(genQs);
+        for (var i = 0; i < (20 - questArray.length); i++) {
+            var randInd = Math.floor(Math.random() * anotherArray.length);
+            newArray.push(anotherArray[randInd]);
+            anotherArray.splice(randInd, 1);
+        }
+        questArray = questArray.concat(newArray);
     }
     playGame();
 }

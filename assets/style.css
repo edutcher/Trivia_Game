@@ -162,19 +162,26 @@ body {
 
 .choseArea {
     background-color: #0f6fb7;
-    background: url('./images/qmark2.jpg');
+    background: url('./images/brainThink.png');
     background-repeat: no-repeat;
     background-position: 50%;
     height: 89vh;
 }
 
 .choseArea h6 {
-    color: #ade3e3;
+    color: black;
+    text-shadow: 3px 3px rgba(28, 122, 28, 1);
 }
 
 .choseArea h2 {
-    color: #8083c8;
+    color: black;
     font-family: 'Roboto', sans-serif;
+    text-shadow: 3px 3px rgba(87, 84, 236, 1);
+}
+
+.choseArea input {
+    background-color: rgba(28, 122, 28, 1);
+    color: black;
 }
 
 #questText {
@@ -236,6 +243,90 @@ body {
 .tool:hover .tiptext {
     visibility: visible;
     opacity: 1;
+}
+
+
+/* The container */
+
+.checkAnchor {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.checkAnchor input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.checkAnchor:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.checkAnchor input:checked~.checkmark {
+    background-color: rgba(28, 122, 28, 1);
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.checkAnchor input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.checkAnchor .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .btn-purp:hover,
