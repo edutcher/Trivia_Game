@@ -54,11 +54,11 @@ const geoQs = [{
     type: 4,
     question: "Where is the Isle of Man located?",
     answers: ["Red Sea", "Irish Sea", "Mediterranean Sea", "Aegean Sea"],
-    correct: 1
 }, {
     cat: "geo",
     type: 4,
     question: "What Continent is Cape Horn located on?",
+    answers: ["Asia", "South America", "Africa", "Europe"],
 }, {
     cat: "geo",
     type: 4,

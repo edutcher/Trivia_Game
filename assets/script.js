@@ -106,7 +106,6 @@ function answer(whatBtn, ans) {
         }
     }
 
-
     questArray.splice(randomQ, 1);
 
     if (currentQ === 20) {
@@ -139,7 +138,6 @@ function nextQ() {
         for (var j = 0; j < 4; j++) {
             if (btns[i].textContent === questArray[randomQ].answers[j]) {
                 btns[i].setAttribute('onclick', 'answer(' + i + ', ' + j + ')');
-                console.log(i, j);
             }
         }
     }
