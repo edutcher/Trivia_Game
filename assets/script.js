@@ -82,8 +82,9 @@ function showResults() {
 }
 
 function answer(whatBtn, ans) {
+
     if (casualType) {
-        if (ans === questArray[randomQ].correct) {
+        if (ans == true) {
             score += 10;
             tips[whatBtn].textContent = 'Correct!';
             tips[whatBtn].style.backgroundColor = "green";
@@ -94,13 +95,14 @@ function answer(whatBtn, ans) {
     }
 
     if (!casualType) {
-        if (ans !== questArray[randomQ].correct) {
+        if (ans == true) {
+            tips[whatBtn].textContent = 'Correct!';
+            tips[whatBtn].style.backgroundColor = "green";
+
+        } else {
             score += 15;
             tips[whatBtn].textContent = 'Wrong';
             tips[whatBtn].style.backgroundColor = 'red';
-        } else {
-            tips[whatBtn].textContent = 'Correct!';
-            tips[whatBtn].style.backgroundColor = "green";
         }
     }
 
@@ -137,6 +139,7 @@ function nextQ() {
         for (var j = 0; j < 4; j++) {
             if (btns[i].textContent === questArray[randomQ].answers[j]) {
                 btns[i].setAttribute('onclick', 'answer(' + i + ', ' + j + ')');
+                console.log(i, j);
             }
         }
     }

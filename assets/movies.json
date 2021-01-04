@@ -2,34 +2,29 @@ const movieQs = [{
     cat: "movie",
     type: 4,
     question: "The movie IN THE MOUTH OF MADNESS featured what fictional writer?",
-    answers: ["Frank Mankin", "Steven Cross", "Sutter Cain", "Bob Newhart"],
-    correct: 2
+    answers: ["Frank Mankin", "Sutter Cain", "Steven Cross", "Bob Newhart"],
 }, {
     cat: "movie",
     type: 4,
     question: "Who played Dr. Hannibal Lecter in THE SILENCE OF THE LAMBS?",
-    answers: ["Dustin Hoffman", "Sir Sean Connery", "Shaquiel O'Neil", "Sir Anthony Hopkins"],
-    correct: 3
+    answers: ["Dustin Hoffman", "Sir Anthony Hopkins", "Sir Sean Connery", "Shaquiel O'Neil"],
 }, {
     cat: "movie",
     type: 4,
     question: "Which Stanely Kubrick movie was banned in England until his death?",
-    answers: ["A Clockwork Orange", "Eyes Wide Shut", "Full Metal Jacket", "The Killing"],
-    correct: 0
+    answers: ["Eyes Wide Shut", "A Clockwork Orange", "Full Metal Jacket", "The Killing"],
 }, {
     cat: "movie",
     type: 4,
     question: "Bruce Lee's son, Brandon, died on the set of which film?",
-    answers: ["Natural Born Killers", "Spice World", "The Crow", "Ip Man"],
-    correct: 2
+    answers: ["Natural Born Killers", "The Crow", "Spice World", "Ip Man"],
 }]
 
 const musicQs = [{
     cat: "music",
     type: 4,
     question: "In 2019 this band release FEAR INOCULUM, their first album in thirteen years",
-    answers: ["Metallica", "The Spice Girls", "Tool", "The Who"],
-    correct: 2
+    answers: ["Metallica", "Tool", "The Spice Girls", "The Who"],
 }, {
     cat: "music",
     type: 4,
@@ -40,14 +35,12 @@ const musicQs = [{
     cat: "music",
     type: 4,
     question: "Which band created STAIRWAY TO HEAVEN?",
-    answers: ["Led Zeppelin", "Journey", "Pink Floyd", "The Cure"],
-    correct: 0,
+    answers: ["Journey", "Led Zeppelin", "Pink Floyd", "The Cure"],
 }, {
     cat: "music",
     type: 4,
     question: "DONT STOP __________ is one of the best known songs from the band JOURNEY",
-    answers: ["BELIEVING", "LIVING", "KEEP GOING", "IM CLOSE"],
-    correct: 0,
+    answers: ["LIVING", "BELIEVING", "KEEP GOING", "IM CLOSE"],
 }]
 
 
@@ -55,8 +48,7 @@ const geoQs = [{
     cat: "geo",
     type: 4,
     question: "What Continent is Mount Kilimanjaro located on?",
-    answers: ["Asia", "South America", "Africa", "Europe"],
-    correct: 2
+    answers: ["Asia", "Africa", "South America", "Europe"],
 }, {
     cat: "geo",
     type: 4,
@@ -67,14 +59,11 @@ const geoQs = [{
     cat: "geo",
     type: 4,
     question: "What Continent is Cape Horn located on?",
-    answers: ["Asia", "Africa", "South America", "Australia"],
-    correct: 2
 }, {
     cat: "geo",
     type: 4,
     question: "What river runs through Baghdad?",
-    answers: ["Nile", "Euphrates", "Tigris", "Jordan"],
-    correct: 2
+    answers: ["Nile", "Tigris", "Euphrates", "Jordan"],
 }]
 
 
@@ -82,26 +71,22 @@ const spaceQs = [{
     cat: "space",
     type: 4,
     question: "How many gas giants are in our solar system?",
-    answers: ["Two", "Three", "Four", "Six"],
-    correct: 2
+    answers: ["Two", "Four", "Three", "Six"],
 }, {
     cat: "space",
     type: 4,
     question: "What is the closest star to our own?",
-    answers: ["Betelguese", "Alpha Centauri", "Proxima Centauri", "Sirius A"],
-    correct: 2
+    answers: ["Betelguese", "Proxima Centauri", "Alpha Centauri", "Sirius A"],
 }, {
     cat: "space",
     type: 4,
     question: "The moon called Titan orbits which planet?",
-    answers: ["Venus", "Jupiter", "Saturn", "Mars"],
-    correct: 2
+    answers: ["Venus", "Saturn", "Jupiter", "Mars"],
 }, {
     cat: "space",
     type: 4,
     question: "One year on Jupiter is how many Earth years?",
-    answers: ["Seven", "Ten", "Twelve", "Sixteen"],
-    correct: 2
+    answers: ["Seven", "Twelve", "Ten", "Sixteen"],
 }]
 
 
@@ -109,26 +94,22 @@ const codingQs = [{
     cat: "coding",
     type: 4,
     question: "In javascript, which is NOT an example of a loop",
-    answers: ["for", "while", "if else", "do while"],
-    correct: 2
+    answers: ["for", "if else", "while", "do while"],
 }, {
     cat: "coding",
     type: 4,
     question: "Which CSS element changes the size of text?",
-    answers: ["text-size", "size", "font-size", "text"],
-    correct: 2
+    answers: ["text-size", "font-size", "size", "text"],
 }, {
     cat: "coding",
     type: 4,
     question: "Which HTML element does NOT need a closing tag?",
-    answers: ["main", "title", "link", "div"],
-    correct: 2
+    answers: ["main", "link", "title", "div"],
 }, {
     cat: "coding",
     type: 4,
     question: "What does the FIRST O in OOP stand for?",
-    answers: ["Oriented", "Other", "Object", "Obvious"],
-    correct: 2
+    answers: ["Oriented", "Object", "Other", "Obvious"],
 }]
 
 
@@ -136,26 +117,22 @@ const lovecraftQs = [{
     cat: "lovecraft",
     type: 4,
     question: "One of Lovecrafts best known stories; The ________ Horror",
-    answers: ["Cosmic", "Lurking", "Dunwich", "Innsmouth"],
-    correct: 2
+    answers: ["Cosmic", "Dunwich", "Lurking", "Innsmouth"],
 }, {
     cat: "lovecraft",
     type: 4,
     question: "According to Lovecraft, Cthulhu lies sleeping on the bottom of the ocean in the city named:",
-    answers: ["Atlantis", "Ab'oth", "R'lyeh", "Innsmouth"],
-    correct: 2
+    answers: ["Atlantis", "R'lyeh", "Ab'oth", "Innsmouth"],
 }, {
     cat: "lovecraft",
     type: 4,
     question: "Which Lovecraftian entitiy was the father of Wilbur Whatley?",
-    answers: ["Cthulhu", "Nub-Shiggurath", "Yog-Sothoth", "Azathoth"],
-    correct: 2
+    answers: ["Cthulhu", "Yog-Sothoth", "Nub-Shiggurath", "Azathoth"],
 }, {
     cat: "lovecraft",
     type: 4,
     question: "Charles _______ Ward was the subject of one of Lovecrafts stories.",
-    answers: ["William", "Gaf-thy", "Dexter", "Abbott"],
-    correct: 2
+    answers: ["William", "Dexter", "Gaf-thy", "Abbott"],
 }]
 
 
@@ -163,26 +140,22 @@ const historyQs = [{
     cat: "history",
     type: 4,
     question: "The assassination of this man sparked World War I",
-    answers: ["Billy Joel", "Pope Lazarus IV", "Franz Ferdinand", "Boris Yeltsin"],
-    correct: 2
+    answers: ["Billy Joel", "Franz Ferdinand", "Pope Lazarus IV", "Boris Yeltsin"],
 }, {
     cat: "history",
     type: 4,
     question: "Which year was Cleopatra believed to be born?",
-    answers: ["560 BC", "143 BC", "69 BC", "42 AD"],
-    correct: 2
+    answers: ["560 BC", "69 BC", "143 BC", "42 AD"],
 }, {
     cat: "history",
     type: 4,
     question: "Genghis Khans Reign took place during which century?",
-    answers: ["Seventh", "Tenth", "Thirteenth", "Sixteenth"],
-    correct: 2
+    answers: ["Seventh", "Thirteenth", "Tenth", "Sixteenth"],
 }, {
     cat: "history",
     type: 4,
     question: "What was the original name of Constantinople?",
-    answers: ["Tripoli", "Copenhagen", "Byzantium", "Prague"],
-    correct: 2
+    answers: ["Tripoli", "Byzantium", "Copenhagen", "Prague"],
 }]
 
 
@@ -190,52 +163,44 @@ const religionQs = [{
     cat: "religion",
     type: 4,
     question: "In Norse Mythology, Odin's horse is named:",
-    answers: ["Quetzalcoatl", "Jormungandr", "Sleipnir", "Nub Shiggurath"],
-    correct: 2
+    answers: ["Quetzalcoatl", "Sleipnir", "Jormungandr", "Nub Shiggurath"],
 }, {
     cat: "religion",
     type: 4,
     question: "Which Titan was the father of Zeus?",
-    answers: ["Themis", "Theseus", "Cronus", "Uranus"],
-    correct: 2
+    answers: ["Themis", "Cronus", "Theseus", "Uranus"],
 }, {
     cat: "religion",
     type: 4,
     question: "With Brahma and Vishnu, this god makes up the Hindu triumvirate",
-    answers: ["Saraswati", "Kartikeya", "Shiva", "Ganesha"],
-    correct: 2
+    answers: ["Saraswati", "Shiva", "Kartikeya", "Ganesha"],
 }, {
     cat: "religion",
     type: 4,
     question: "The Roman Goddess of wisdom, learning, arts, and industry:",
-    answers: ["Vesta", "Ceres", "Minerva", "Diana"],
-    correct: 2
+    answers: ["Vesta", "Minerva", "Ceres", "Diana"],
 }]
 
 const sportsQs = [{
     cat: "sports",
     type: 4,
     question: "Which sport is Gary Kasparov well known for?",
-    answers: ["Tennis", "Soccer", "Chess", "Rugby"],
-    correct: 2
+    answers: ["Tennis", "Chess", "Soccer", "Rugby"],
 }, {
     cat: "sports",
     type: 4,
     question: "Which country did curling originate from?",
-    answers: ["Sweden", "Russia", "Scotland", "Canada"],
-    correct: 2
+    answers: ["Sweden", "Scotland", "Russia", "Canada"],
 }, {
     cat: "sports",
     type: 4,
     question: "Tualatin, Oregon hosts the West Coast Giant ________ Regatta",
-    answers: ["Inner Tube", "Canoe", "Pumpkin", "Rowboat"],
-    correct: 2
+    answers: ["Inner Tube", "Pumpkin", "Canoe", "Rowboat"],
 }, {
     cat: "sports",
     type: 4,
     question: "______ of Legends is one of the worlds biggest e-sports.",
-    answers: ["Story", "Lash", "League", "Gang"],
-    correct: 2
+    answers: ["Story", "League", "Lash", "Gang"],
 }]
 
 
@@ -243,120 +208,100 @@ const genQs = [{
     cat: "gen",
     type: 4,
     question: "Salvador Dalí had this animal as a pet",
-    answers: ["Panda", "Koala", "Anteater", "Alligator"],
-    correct: 2
+    answers: ["Panda", "Anteater", "Koala", "Alligator"],
 }, {
     cat: "gen",
     type: 4,
     question: "Area 51 is located in which US State?",
-    answers: ["Utah", "New Mexico", "Nevada", "Arizona"],
-    correct: 2
+    answers: ["Utah", "Nevada", "New Mexico", "Arizona"],
 }, {
     cat: "gen",
     type: 4,
     question: "How many colors are in a rainbow?",
-    answers: ["Six", "Eight", "Seven", "Nine"],
-    correct: 2
+    answers: ["Six", "Seven", "Eight", "Nine"],
 }, {
     cat: "gen",
     type: 4,
     question: "What is Cynophobia the fear of?",
-    answers: ["Ice", "Stairs", "Dogs", "Insects"],
-    correct: 2
+    answers: ["Ice", "Dogs", "Stairs", "Insects"],
 }, {
     cat: "gen",
     type: 4,
     question: "What is the world's most expensive spice by weight?",
-    answers: ["Melange", "Cinnamon", "Saffron", "Anise"],
-    correct: 2
+    answers: ["Melange", "Saffron", "Cinnamon", "Anise"],
 }, {
     cat: "gen",
     type: 4,
     question: "What alcoholic drink is mainly made from juniper berries?",
-    answers: ["Whiteclaw", "Mead", "Gin", "Vodka"],
-    correct: 2
+    answers: ["Whiteclaw", "Gin", "Mead", "Vodka"],
 }, {
     cat: "gen",
     type: 4,
     question: "When did the website FACEBOOK launch?",
-    answers: ["2011", "2009", "2004", "2001"],
-    correct: 2
+    answers: ["2011", "2004", "2009", "2001"],
 }, {
     cat: "gen",
     type: 4,
     question: "What’s the chemical symbol for silver?",
-    answers: ["Mu", "Sl", "Ag", "Si"],
-    correct: 2
+    answers: ["Mu", "Ag", "Sl", "Si"],
 }, {
     cat: "gen",
     type: 4,
     question: "How many colors do the Olympic Rings have?",
-    answers: ["Seven", "Four", "Five", "Six"],
-    correct: 2
+    answers: ["Seven", "Five", "Four", "Six"],
 }, {
     cat: "gen",
     type: 4,
     question: "What TV station did the show LOST originally air on?",
-    answers: ["Fox", "CBS", "ABC", "NBC"],
-    correct: 2
+    answers: ["Fox", "ABC", "CBS", "NBC"],
 }, {
     cat: "gen",
     type: 4,
     question: "What is the capital city of Australia?",
-    answers: ["Melbourne", "Perth", "Canberra", "Sydney"],
-    correct: 2
+    answers: ["Melbourne", "Canberra", "Perth", "Sydney"],
 }, {
     cat: "gen",
     type: 4,
     question: "How many notes are there in a musical scale?",
-    answers: ["Five", "Six", "Seven", "Nine"],
-    correct: 2
+    answers: ["Five", "Seven", "Six", "Nine"],
 }, {
     cat: "gen",
     type: 4,
     question: "A baby Oyster is called a :",
-    answers: ["Chit", "Oyling", "Spat", "Dink"],
-    correct: 2
+    answers: ["Chit", "Spat", "Oyling", "Dink"],
 }, {
     cat: "gen",
     type: 4,
     question: "How many keys are there on a piano?",
-    answers: ["94", "76", "88", "67"],
-    correct: 2
+    answers: ["94", "88", "76", "67"],
 }, {
     cat: "gen",
     type: 4,
     question: "Which fictional hotel serves as the setting for THE SHINING?",
-    answers: ["Bates", "Ritz Carlton", "Overlook", "California"],
-    correct: 2
+    answers: ["Bates", "Overlook", "Ritz Carlton", "California"],
 }, {
     cat: "gen",
     type: 4,
     question: "What is the name of the time machine DOCTOR WHO uses?",
-    answers: ["OCTDEX", "PRIMER", "TARDIS", "LOOMIS"],
-    correct: 2
+    answers: ["OCTDEX", "TARDIS", "PRIMER", "LOOMIS"],
 }, {
     cat: "gen",
     type: 4,
     question: "Natasha Romanova is the real name of which superhero?",
-    answers: ["Storm", "Taskmaster", "Black Widow", "Ms Marvel"],
-    correct: 2
+    answers: ["Storm", "Black Widow", "Taskmaster", "Ms Marvel"],
 }, {
     cat: "gen",
     type: 4,
     question: "Which year was Daniel Craig’s first Bond film released?",
-    answers: ["2011", "2004", "2006", "2009"],
-    correct: 2
+    answers: ["2011", "2006", "2004", "2009"],
 }, {
     cat: "gen",
     type: 4,
     question: "Which year did the European Union first introduce the Euro as currency?",
-    answers: ["1992", "1985", "1999", "2006"],
-    correct: 2
+    answers: ["1992", "1999", "1985", "2006"],
 }, {
     cat: "gen",
     type: 4,
     question: "Beirut is the capital of which country?",
-    answers: ["Syria", "Azerbaijan", "Lebanon", "Croatia"],
-    correct: 2
+    answers: ["Syria", "Lebanon", "Azerbaijan", "Croatia"],
 }]
