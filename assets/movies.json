@@ -227,8 +227,8 @@ const sportsQs = [{
 }, {
     cat: "sports",
     type: 4,
-    question: "Which sport is Gary Kasparov well known for?",
-    answers: ["Tennis", "Soccer", "Chess", "Rugby"],
+    question: "Tualatin, Oregon hosts the West Coast Giant ________ Regatta",
+    answers: ["Inner Tube", "Canoe", "Pumpkin", "Rowboat"],
     correct: 2
 }, {
     cat: "sports",

@@ -223,6 +223,7 @@ body {
 }
 
 .choseArea h2 {
+    font-size: 3rem;
     color: black;
     font-family: 'Roboto', sans-serif;
     text-shadow: 3px 3px rgba(87, 84, 236, 1);
@@ -290,7 +291,7 @@ body {
 }
 
 
-/* The container */
+/* The container for the custom checkbox*/
 
 .checkAnchor {
     display: block;
@@ -336,7 +337,7 @@ body {
 }
 
 
-/* When the checkbox is checked, add a blue background */
+/* When the checkbox is checked, add a green background */
 
 .checkAnchor input:checked~.checkmark {
     background-color: rgba(28, 122, 28, 1);
@@ -362,11 +363,12 @@ body {
 /* Style the checkmark/indicator */
 
 .checkAnchor .checkmark:after {
+    color: black;
     left: 9px;
     top: 5px;
     width: 5px;
     height: 10px;
-    border: solid white;
+    border: solid black;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
