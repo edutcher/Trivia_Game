@@ -333,26 +333,32 @@ function choseCats(gameChoice) {
     choseCatBtn.textContent = 'Play!'
     choseCatBtn.classList.add('btn', 'btn-purp', 'mx-2', 'p-2', 'mt-5', 'px-3');
     choseCatBtn.setAttribute('onclick', 'getQs()');
+    choseCatBtn.setAttribute('id', 'playBtn');
 
     rerollBtn.textContent = 'Reroll'
     rerollBtn.classList.add('btn', 'btn-purp', 'mx-2', 'p-2', 'mt-5', 'px-3');
     rerollBtn.setAttribute('onclick', 'choseCats()');
+    rerollBtn.setAttribute('id', 'rerollBtn');
 
-    var divArray = [];
+    var newChecks = [];
     var checkArray = [];
     var catTitles = [];
+    var divArray = [];
 
     for (var i = 0; i <= 6; i++) {
-        const newDiv = document.createElement('div');
+        const newLabel = document.createElement('label');
         const newCheck = document.createElement('input');
-        const newTitle = document.createElement('h6');
-        newDiv.classList.add('col-2', 'mx-4', 'my-5');
+        const newSpan = document.createElement('span');
+        const newDiv = document.createElement('div');
+        newLabel.classList.add('checkAnchor');
         newCheck.setAttribute('type', 'checkbox');
         newCheck.checked = true;
-        newTitle.classList.add('d-inline', 'clearfix', 'mx-2');
-        divArray.push(newDiv);
+        newSpan.classList.add('checkmark');
+        newDiv.classList.add('col-2', 'checkLabel' + i);
+        catTitles.push(newLabel);
         checkArray.push(newCheck);
-        catTitles.push(newTitle);
+        newChecks.push(newSpan);
+        divArray.push(newDiv);
     }
 
     var tempArray = Array.from(catArray);
@@ -368,15 +374,16 @@ function choseCats(gameChoice) {
     for (var i = 0; i < 3; i++) {
         catTitles[i].textContent = chosenCats[i];
         checkArray[i].setAttribute('id', chosenCats[i]);
-        divArray[i].appendChild(checkArray[i]);
+        catTitles[i].appendChild(checkArray[i]);
+        catTitles[i].appendChild(newChecks[i]);
         divArray[i].appendChild(catTitles[i]);
         checkRow.appendChild(divArray[i]);
         catTitles[i + 3].textContent = chosenCats[i + 3];
         checkArray[i + 3].setAttribute('id', chosenCats[i + 3]);
-        divArray[i + 3].appendChild(checkArray[i + 3]);
+        catTitles[i + 3].appendChild(checkArray[i + 3]);
+        catTitles[i + 3].appendChild(newChecks[i + 3]);
         divArray[i + 3].appendChild(catTitles[i + 3]);
         checkRow2.appendChild(divArray[i + 3]);
-
     }
 
     const spaceRow = document.createElement('div');

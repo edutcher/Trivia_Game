@@ -82,7 +82,7 @@ body {
     background: url('./images/beach.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: -250px;
+    background-position: -220px;
 }
 
 .split.right::before {
@@ -153,11 +153,13 @@ body {
 #lightScore {
     background-color: #0f6fb7;
     height: 100vh;
+    border-right: 2px solid black;
 }
 
 #casualScore {
     background-color: #0f6fb7;
     height: 100vh;
+    border-left: 2px solid black;
 }
 
 .choseArea {
@@ -168,20 +170,62 @@ body {
     height: 89vh;
 }
 
-.choseArea h6 {
+.choseArea label {
     color: black;
     text-shadow: 3px 3px rgba(28, 122, 28, 1);
+}
+
+.choseArea .checkLabel0 {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+
+.choseArea .checkLabel1 {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+.choseArea .checkLabel2 {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+}
+
+.choseArea .checkLabel3 {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(100px);
+}
+
+.choseArea .checkLabel4 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translateY(100px);
+}
+
+.choseArea .checkLabel5 {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translateY(100px);
+}
+
+.choseArea #playBtn {
+    transform: translateY(300px);
+}
+
+.choseArea #rerollBtn {
+    transform: translateY(300px);
 }
 
 .choseArea h2 {
     color: black;
     font-family: 'Roboto', sans-serif;
     text-shadow: 3px 3px rgba(87, 84, 236, 1);
-}
-
-.choseArea input {
-    background-color: rgba(28, 122, 28, 1);
-    color: black;
 }
 
 #questText {
@@ -369,6 +413,59 @@ fieldset[disabled] .btn-purp.active {
     background-color: #91E3E2;
 }
 
+@media (max-width: 1500px) {
+    .choseArea .checkLabel0 {
+        position: absolute;
+        top: 30%;
+        left: 15%;
+    }
+    .choseArea .checkLabel1 {
+        position: absolute;
+        top: 30%;
+        left: 40%;
+    }
+    .choseArea .checkLabel2 {
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        transform: translateY(100px)
+    }
+    .choseArea .checkLabel3 {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translateY(100px);
+    }
+    .choseArea .checkLabel4 {
+        position: absolute;
+        top: 70%;
+        left: 15%;
+        transform: translateY(200px);
+    }
+    .choseArea .checkLabel5 {
+        position: absolute;
+        top: 70%;
+        left: 40%;
+        transform: translateY(200px);
+    }
+    .choseArea label {
+        font-size: 1em;
+    }
+    .choseArea #playBtn {
+        transform: translateY(300px);
+    }
+    .choseArea #rerollBtn {
+        transform: translateY(300px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .choseArea label {
+        margin-right: 50px;
+        padding-right: 150px;
+    }
+}
+
 @media (max-width: 890px) {
     .splitHead {
         font-size: 1.5rem;
@@ -380,6 +477,42 @@ fieldset[disabled] .btn-purp.active {
     }
     #catHead {
         display: none;
+    }
+    .choseArea .checkLabel0 {
+        position: absolute;
+        top: 10%;
+        left: 15%;
+    }
+    .choseArea .checkLabel1 {
+        position: absolute;
+        transform: translateY(60px);
+        left: 15%;
+    }
+    .choseArea .checkLabel2 {
+        position: absolute;
+        transform: translateY(120px);
+        left: 15%;
+    }
+    .choseArea .checkLabel3 {
+        position: absolute;
+        transform: translateY(180px);
+        left: 15%;
+    }
+    .choseArea .checkLabel4 {
+        position: absolute;
+        transform: translateY(240px);
+        left: 15%;
+    }
+    .choseArea .checkLabel5 {
+        position: absolute;
+        transform: translateY(300px);
+        left: 15%;
+    }
+    .choseArea #playBtn {
+        transform: translateY(360px);
+    }
+    .choseArea #rerollBtn {
+        transform: translateY(360px);
     }
 }
 
