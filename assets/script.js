@@ -338,7 +338,7 @@ function choseCats(gameChoice) {
 
     rerollBtn.textContent = 'Reroll'
     rerollBtn.classList.add('btn', 'btn-purp', 'mx-2', 'p-2', 'mt-5', 'px-3');
-    rerollBtn.setAttribute('onclick', 'choseCats()');
+    rerollBtn.setAttribute('onclick', 'choseCats(' + gameChoice + ')');
     rerollBtn.setAttribute('id', 'rerollBtn');
 
     var newChecks = [];

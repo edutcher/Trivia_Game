@@ -132,6 +132,7 @@ body {
 #topBar {
     background-color: #0f6fb7;
     height: 10vh;
+    border-bottom: 2px solid black;
 }
 
 #questNum {
